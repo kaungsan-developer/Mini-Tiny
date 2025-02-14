@@ -5,6 +5,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+h4 {
+  position: absolute;
+  top: 10%;
+  margin: 0px auto;
+}
 .you {
   color: white;
   font-size: clamp(100px, 15vw, 300px); /* Responsive font size */

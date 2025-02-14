@@ -1,0 +1,87 @@
+body {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.you {
+  color: white;
+  font-size: clamp(100px, 15vw, 300px); /* Responsive font size */
+  position: relative;
+}
+img {
+  max-height: clamp(200px, 40vh, 300px); /* Responsive image height */
+  width: auto;
+  animation: float 3s ease-in-out infinite;
+}
+li {
+  cursor: pointer;
+}
+.you span {
+  display: inline-block;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.heart {
+  height: 70px;
+  width: 70px;
+  background: #f20044;
+  position: relative;
+  transform: rotate(-45deg);
+  box-shadow: -10px 10px 90px #f20044;
+  animation: heart 0.8s linear infinite;
+  opacity: 0;
+  display: none;
+  margin: 20px auto;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #f20044;
+  border-radius: 50px;
+}
+.heart::before {
+  top: -50%;
+}
+.heart::after {
+  right: -50%;
+}
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.03);
+  }
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.9);
+  }
+}
+
+.dropdown-menu {
+  min-width: 100px;
+  text-align: center;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #198754;
+  color: white;
+}
